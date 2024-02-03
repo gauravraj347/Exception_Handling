@@ -1,0 +1,54 @@
+1 Different Types of Errors in Java:
+
+Syntax Error/Compile-Time Mistakes:
+Refers to mistakes in the program's structure that violate the rules of the programming language.
+Identified by the compiler during the compilation process.
+Logical Error/Run-Time Mistakes:
+Refers to mistakes in the program's logic or algorithm.
+Identified by the JVM during the execution of the program.
+
+2 What is an Exception in Java:
+
+An exception in Java is an unexpected event or error that disrupts the normal flow of a program.
+Exception handling is the mechanism to deal with these unexpected events gracefully.
+Exceptions can occur at runtime and are categorized into checked exceptions (which must be handled) and unchecked exceptions (optional to handle).
+3 How Can You Handle Exceptions in Java with an Example:
+
+Exception handling in Java is done using the try, catch, and finally blocks.
+Example:
+try {
+    // Code that may cause an exception
+    int result = 10 / 0; // Division by zero will cause an ArithmeticException
+} catch (ArithmeticException e) {
+    // Handling the exception
+    System.out.println("Error: Division by zero");
+} finally {
+    // Code that always executes, whether an exception occurs or not
+    System.out.println("Finally block executed");
+}
+
+4 Why Do We Need Exception Handling in Java:
+
+Exception handling is crucial for maintaining the smooth execution of a program.
+It prevents the abrupt termination of a program due to unexpected errors.
+Allows developers to identify, handle, and recover from exceptional situations, enhancing the reliability of the software.
+
+5 Difference Between Exception and Error in Java:
+
+Errors typically occur during the runtime and are more severe, often leading to the termination of the program (e.g., OutOfMemoryError).
+Exceptions are events that occur during the execution of a program and can be handled to prevent the program from crashing (e.g., NullPointerException).
+
+6. Name the different types of exceptions in Java.
+
+Ans: Based on handling by JVM, there are typically two types of exceptions in Java:
+
+Checked: Occur during the compilation. Here, the compiler checks whether the exception is handled and 
+throws an error accordingly.
+
+Unchecked: Occur during program execution. These are not detectable during the compilation process.
+
+
+7. Can we just use try instead of finally and catch blocks? Give an example .
+
+Ans: No, doing so will show a compilation error. Catch or finally block must always accompany try block. We 
+can remove either finally block or catch block, but never both.
